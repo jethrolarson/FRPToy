@@ -1,0 +1,21 @@
+@import "variables/index";
+@import "util";
+@cell-gutter: @s-medium;
+.row(){
+  .clearfix;
+}
+
+.cell(){
+  float: left;
+  box-sizing: border-box;
+  padding: 0 (@cell-gutter / 2);
+
+  &:first-child{
+    padding-left: 0;
+  }
+
+  &:last-child{
+    padding-right: 0;
+  }
+}
+

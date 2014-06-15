@@ -1,0 +1,32 @@
+{
+  "name": "AgileUI",
+  "version": "0.0.0",
+  "description": "Demo of Agile Design Through Abstraction",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git.amazon.com:2222/pkg/AgileUI"
+  },
+  "author": "Jethro Larson",
+  "license": "None",
+  "devDependencies": {
+    "gulp": "~3.5.6",
+    "gulp-coffee": "~1.4.1",
+    "gulp-jasmine": "~0.2.0",
+    "coffee-script": "~1.7.1",
+    "gulp-util": "~2.2.14",
+    "grunt-contrib-connect": "~0.6.0",
+    "gulp-autoprefixer": "0.0.7",
+    "gulp-connect": "~2.0.5",
+    "gulp-less": "~1.2.3",
+    "connect": "~2.19.6",
+    "gulp-browserify": "~0.5.0",
+    "baconjs": "~0.7.14",
+    "coffeeify": "~0.6.0",
+    "gulp-rename": "~1.2.0",
+    "lodash": "~2.4.1"
+  }
+}
