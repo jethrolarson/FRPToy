@@ -33,7 +33,7 @@ canvasEl = document.getElementById 'c'
 c = canvasEl.getContext '2d'
 DPR = window.devicePixelRatio
 canvasPos = (e) -> new Vector2 canvasEl.offsetLeft, canvasEl.offsetTop
-
+divideBy = R.flip R.divide
 #event stream that vends frames
 frames = Bacon.fromBinder (sink) ->
     request =
@@ -117,7 +117,7 @@ size = esSizeDec
     #join both resize event streams
     .merge esSizeInc
     #divide mousewheel values by 4 so it doesn't grow too fast
-    .merge esWheelY.map R.divideBy 4
+    .merge esWheelY.map divideBy 4
     #scan over size changes and add the params, but set a min size
     .scan startSize, R.pipe(R.add, util.max minSize)
 
@@ -147,7 +147,7 @@ mouseVelocity = mousePos.combine esTime, (v, time) -> { pos: v, time: time }
 
         #If dTime would be 0 set to 1 so we don't divide by zero
         dTime = o2.time - o1.time || 1
-        vel = dPos.map R.divideBy dTime #px / ms
+        vel = dPos.map divideBy dTime #px / ms
         return {
             pos: o2.pos
             time: o2.time

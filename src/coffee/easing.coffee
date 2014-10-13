@@ -1,6 +1,6 @@
 #largely a coffee port from found easing functions on the internet.
 
-_   = require 'lodash'
+R   = require 'ramda'
 
 baseEasings = {}
 $.each [
@@ -14,7 +14,7 @@ $.each [
         Math.pow p, i + 2
     return
 
-_.extend baseEasings, {
+R.extend baseEasings, {
     Sine: (p) ->
         1 - Math.cos(p * Math.PI / 2)
 
@@ -37,7 +37,7 @@ _.extend baseEasings, {
         1 / Math.pow(4, 3 - bounce) - 7.5625 * Math.pow((pow2 * 3 - 2) / 22 - p, 2)
 }
 
-_.each baseEasings, (name, easeIn) ->
+R.each baseEasings, (name, easeIn) ->
     $.easing["easeIn" + name] = easeIn
     $.easing["easeOut" + name] = (p) ->
         1 - easeIn(1 - p)
