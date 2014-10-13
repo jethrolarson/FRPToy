@@ -1,0 +1,34 @@
+@import '../variables/screen';
+//sizing classes used in particular with grid.less but conceivably in other contexts.
+
+//Golden Ratio Constants
+@size-gold1: 38.2%;
+@size-gold2: 61.8%;
+
+.size-gold1{
+  width: @size-gold1;
+}
+.size-gold2{
+  width: @size-gold2;
+}
+
+//TODO add classes for other common cases like 960.gs
+
+
+.size-full{
+    width: 100%;
+}
+
+.size-shrinkFit{
+    max-width: 100%;
+}
+
+.size-max-large{
+    max-width: 1000px;
+}
+
+@media screen and (max-width: @screen-small) {
+    .sm-size-full{
+        .size-full;
+    }
+}

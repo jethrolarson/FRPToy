@@ -1,0 +1,43 @@
+/**
+ *  Usage: 
+ *  <button class="Button">Buy Button</button>
+ *  <button class="Button Button--buy">Buy Button</button>
+ */
+
+@import "../variables/index";
+
+//Uses global colors for defaults. These can be overwritten my files that import this one.
+@Button_fs: @textSize-base;
+@Button_p: @s-mini @s-medium;
+@Button_bgi: linear-gradient(0deg, #595959, #4d4d4d);
+@Button_fc: @c-text-dark;
+
+@Button--isFocus_c: @c-focus;
+@Button--buy_bgi: linear-gradient(0deg, #F8A731, #FBBD31);
+@Button--buy--disabled_bgi: linear-gradient(0deg, #C7AA81, #D8C7A1);
+@Button--buy--disabled_fc: @c-text-deem;
+
+//base button
+.Button{
+    font-size: @Button_fs;
+    padding: @Button_p;
+    border: none;
+    font-family: inherit;
+    background-image: @Button_bgi;
+    border-radius: 0.25rem;
+    color: @Button_fc;
+    &:focus,
+    &.isFocus{
+        box-shadow: inset 0 0 0 3px @Button--isFocus_c;
+        outline: 0;
+    }
+    &:disabled,
+    &.isDisabled{
+        color: @Button--buy--disabled_fc;
+    }
+}
+
+//buy button variant
+.Button--buy{
+  background-image: @Button--buy_bgi;
+}

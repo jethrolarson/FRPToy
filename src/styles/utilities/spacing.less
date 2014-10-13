@@ -1,0 +1,14 @@
+@import "../variables/screen";
+@import "../variables/spacing";
+
+.spacing-medium{
+    margin-top: @s-medium;
+    margin-bottom: @s-medium;
+}
+
+@media screen and (max-width: @screen-small) {
+    .sm-spacing-medium{
+        margin-top: @s-medium !important;
+        margin-bottom: @s-medium !important;
+    }
+}

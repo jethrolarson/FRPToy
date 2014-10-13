@@ -1,3 +1,4 @@
+//This file contains basic resets for html elements. TODO use normalize.css when we get to a higher complexity.
 @import "variables/index";
 
 html, body {
@@ -6,21 +7,22 @@ html, body {
   overflow:   hidden;
 }
 
+html{
+  font-size: @textSize-root;
+}
 body{
-  font-size: @fs-root;
   line-height: 1.4;
   font-family: Helvetica, Arial, sans-serif;
-  background-color: @bgc;
-  color: @fc;
+  //Switch unit to em to overcome chrome bug.
+  font-size: unit(@textSize-base, em);
+  background-color: @c-bg;
+  color: @c-text;
   padding: 0;
   margin: 0;
 }
 
 canvas{display: block}
-#page{
-  font-size: @fs-base;
-}
 
-h1,h2,h3{
+h1, h2, h3{
   font-weight: normal;  
 }

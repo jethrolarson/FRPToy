@@ -1,0 +1,33 @@
+//Views import all their dependencies, even if the stylesheet itself doesn't depend on them for compilation. 
+//Less ensures that imports aren't imported repeatedly.
+@import "../variables/index";
+@import "../utilities/index";
+@import "../components/buttons";
+@import "../components/grid";
+
+// We might want refactor some of this stuff later, but you know, YAGNI
+
+.page{
+  padding: @s-medium;
+}
+
+.masthead{
+  max-width: 1000px;
+}
+
+.title{
+  font-size: @textSize-medium;
+  margin: 0 0 @s-small;
+}
+
+.buy-box{
+  margin-top: @s-extra-large;
+  button{ 
+    width: 100%;
+  }
+}
+
+.description{
+  margin: @s-medium;
+  margin-top: @s-large;
+}

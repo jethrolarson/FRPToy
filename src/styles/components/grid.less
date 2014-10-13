@@ -1,0 +1,18 @@
+//Note: we can be more expressive if we switch from floats to inline-block or flex-box but we then use some browser support.
+@import "../variables/index";
+@import "../utilities/index";
+@grid-cell_gutter: @s-medium;
+@_grid-cell_gutter-half: @grid-cell_gutter / 2; //local var, don't override
+.Grid{
+  .clearfix;
+  margin: 0 -@_grid-cell_gutter-half;
+}
+.Grid--gutter{
+  margin: @_grid-cell_gutter-half;
+}
+
+.Grid-cell{
+  float: left;
+  box-sizing: border-box;
+  padding: 0 @_grid-cell_gutter-half;
+}

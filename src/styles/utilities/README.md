@@ -1,0 +1,1 @@
+Because utilities are applied as hacks or workarounds for issues it's okay for these files to use !important. We trying to keep important flags out of all other instances.

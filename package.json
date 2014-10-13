@@ -27,6 +27,7 @@
     "baconjs": "~0.7.14",
     "coffeeify": "~0.6.0",
     "gulp-rename": "~1.2.0",
-    "lodash": "~2.4.1"
+    "lodash": "~2.4.1",
+    "ramda": "~0.2.4"
   }
 }
