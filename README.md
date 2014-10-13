@@ -5,7 +5,8 @@ Requires:
 * gulp `npm install gulp -g`
 
 
-1. gulp the project to start the server (npm install gulp -g; gulp)
-2. navigate to  http://localhost:8000/ for Bacon demo
-3. navigate to http://localhost:8000/detail.html for CSS demo
+1. `npm install`
+2. `gulp` Start the watch server
+2. `open http://localhost:8000` for FRP demo
+3. `open http://localhost:8000/detail.html` for CSS example
 
